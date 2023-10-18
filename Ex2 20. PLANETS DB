@@ -1,0 +1,19 @@
+planet(mercury, 0.39, 0.24).
+planet(venus, 0.72, 0.62).
+planet(earth, 1.0, 1.0).
+planet(mars, 1.52, 0.11).
+planet(jupiter, 5.20, 317.83).
+planet(saturn, 9.58, 95.16).
+planet(uranus, 19.22, 14.54).
+planet(neptune, 30.05, 17.15).
+distance_from_sun(Planet, Distance) :-
+    planet(Planet, Distance, _).
+planet_mass(Planet, Mass) :-
+    planet(Planet, _, Mass).
+planet_info(Planet, Distance, Mass) :-
+    planet(Planet, Distance, Mass).
+gravity(Planet, Gravity) :-
+    planet(Planet, Distance, Mass),
+    earth_gravity(EarthGravity),
+    Gravity is EarthGravity * (Mass / Distance^2).
+earth_gravity(1.0).
