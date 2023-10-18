@@ -1,0 +1,27 @@
+student(john, 101).
+student(susan, 102).
+student(mary, 103).
+student(david, 104).
+
+teacher(professor_smith, math, 201).
+teacher(professor_jones, history, 202).
+teacher(professor_doe, chemistry, 203).
+teacher(professor_wilson, literature, 204).
+
+enrolled(john, math).
+enrolled(john, history).
+enrolled(susan, history).
+enrolled(susan, chemistry).
+enrolled(mary, math).
+enrolled(david, literature).
+
+teaches(professor_smith, math).
+teaches(professor_jones, history).
+teaches(professor_doe, chemistry).
+teaches(professor_wilson, literature).
+
+course_code(math, 301).
+course_code(history, 302).
+course_code(chemistry, 303).
+course_code(literature, 304).
+
