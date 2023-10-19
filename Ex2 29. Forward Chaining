@@ -1,0 +1,15 @@
+bird(tweety).
+bird(donald).
+fish(nemo).
+can_fly(tweety).
+can_swim(nemo).
+has_feathers(X) :- bird(X).
+
+% Rules
+can_move(X) :- can_fly(X).
+can_move(X) :- can_swim(X).
+
+% Forward Chaining
+infer(Fact) :- can_move(Fact).
+infer(Fact) :- has_feathers(Fact).
+
